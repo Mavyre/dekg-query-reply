@@ -2,6 +2,8 @@
 
 ## School toy dataset
 
+This dataset have been created for testing purposes and represent the running example of the DEKG Query/Reply approach. It contains both relational database content and tabular documents.
+
 | Query (Natural Language) | Conjunctive Query | Query Type | Time (average 10 queries) | Semantic links used | Number of queried types on BV | Number of queried types on GS | Grouped results | Reply volume (number of elements) |
 |---|---|---|---|---|---|---|---|---|
 | All People which are Teachers, and similar data | { p \| ∃(∅) ∧ ηp(p) = People ∧ p.Type = "Teacher" ∧ B } | Single Node subtype + Broad selection | 41.044ms | 0 | 1 | 1 | 0 | 4 |
@@ -11,6 +13,8 @@
 
 ## France OpenData
 
+This Dataset is built against three France OpenData sets: two french Toulouse city Opendata (Communes Toulouse - https://data.toulouse-metropole.fr/explore/dataset/communes/information/, accessed 2021-05-11) and Code postaux Toulouse (https://data.toulouse-metropole.fr/explore/dataset/codes-postaux-de-toulouse/information/, accessed 2021-05-11) containing data on all Cities of Toulouse and ZIP Codes; and a COVID-19 dataset from France (Centres de Vaccination - https://www.data.gouv.fr/fr/datasets/relations-commune-cms/, accessed 2021-05-11) representing all available vaccination centres in France. Data has been fetched using their REST API.
+
 | Query (Natural Language) | Conjunctive Query | Query Type | Time (average 10 queries) | Semantic links used | Number of queried types on BV | Number of queried types on GS | Grouped results | Reply volume (number of elements) |
 |---|---|---|---|---|---|---|---|---|
 | All Cities | { c \| ∃(∅) ∧ ηp(c) = Cities } | Single Node type selection | 48.356ms | 0 | 1 | 1 | 0 | 37 |
@@ -18,6 +22,8 @@
 | All entities | { d \| ∃(∅) ∧ ηp(d) = * } | All nodes selection | 89.536ms | 0 | 3 | 3 | 0 | 2366 |
 
 ## Team of Teams survey data company
+
+This dataset has been extracted from internal employee survey, representing each employee skills level, field of work, and also hobbies as two CSV documents. The documents contains a few lines but a lot of columns. Data is anonymised.
 
 | Query (Natural Language) | Conjunctive Query | Query Type | Time (average 10 queries) | Semantic links used | Number of queried types on BV | Number of queried types on GS | Grouped results | Reply volume (number of elements) |
 |---|---|---|---|---|---|---|---|---|
